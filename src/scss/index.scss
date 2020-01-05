@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap');
+
+
+body {
+    margin: 0;
+}
+
+#video {
+    // height: 100%;
+    // min-height: 600px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translateX(calc((100% - 100vw) / 2));
+}
+
+#videoContainer {
+height: 100vh;
+}
+
+#buttonContainer {
+    position: fixed;
+    z-index: 10;
+    color:white;
+
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+#buttonContainer:hover {
+    cursor: pointer;
+}
+
+
+#buttonBox {
+    padding: 30px 30px 30px 40px;
+    border: 4px solid white;
+    opacity: 0.5;
+    transition: opacity 0.4s, padding 0.4s;
+    transition-delay: 0.2s;
+    transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+#buttonBox:hover {
+    opacity: 1;
+    padding: 10px 20px 10px 20px;
+    h1{
+        letter-spacing: .5em;
+        font-size: 1.5em;
+    }
+}
+
+#buttonBox h1 {
+    font-family: 'Archivo Narrow', sans-serif;
+    letter-spacing: 1.5em;
+    font-size: 1.2em;
+    transition: letter-spacing 0.4s, font-size 0.4s;
+    transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+#topBarContainer, #bottomBarContainer {
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    margin: 0;
+    margin-top: 15px;
+}
+
+#bottomBarContainer {
+    bottom:0%;
+}
+
+#topBarContainer li, #bottomBarContainer li {
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 1.2em;
+    display: inline-flex;
+    letter-spacing: .1em;
+    width: 30vw;
+    color: white;
+}
+
+#topBarContainer li:hover, #bottomBarContainer li:hover {
+    cursor: pointer;
+}
+
+#topBarContainer ul, #bottomBarContainer ul {
+    list-style: none;
+}
+
+#top1, #bottom1 {
+    opacity: .5;
+    transition: opacity .4s;
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+
+#top1:hover,  #bottom1:hover{
+    opacity: 1;
+}
+
+#top2, #bottom2 {
+    justify-content: center;
+
+}
+
+#top3, #bottom3 {
+    justify-content: flex-end;
+    opacity: .5;
+    transition: opacity .4s;
+    margin-left: 40px;
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+#top3:hover, #bottom3:hover{
+    opacity: 1;
+}
+
+#test {
+    position: fixed;
+    z-index: 40;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    display: none;
+}

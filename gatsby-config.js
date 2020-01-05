@@ -3,6 +3,36 @@ module.exports = {
     title: `Film Site`,
     description: `A template for a film website`,
     author: `@ndrewgood`,
+    instagramURL: 'http://instagram.com',
+    indiegogoURL: 'http://indiegogo.com',
+    team: {
+      role1: {
+        title: '',
+        name: '',
+        url: ''
+      },
+      role2: {
+        title: '',
+        name: '',
+        url: ''
+      },
+      role3: {
+        title: '',
+        name: '',
+        url: ''
+      },
+      role4: {
+        title: '',
+        name: '',
+        url: ''
+      },
+      role5: {
+        title: '',
+        name: '',
+        url: ''
+      },
+    }
+
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,12 +48,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Film Site`,
+        short_name: `film`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
