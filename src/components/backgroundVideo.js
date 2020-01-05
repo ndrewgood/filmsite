@@ -1,5 +1,5 @@
 import React from "react"
-import VideoSrc from "../videos/BackgroundFootage.mp4"
+import VideoSrc from "../videos/ShortBackgroundFootage.mp4"
 
 const BackgroundVideo = () => (
     <div id="videoContainer">
