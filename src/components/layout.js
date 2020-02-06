@@ -7,32 +7,27 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, StaticQuery } from "gatsby"
 
 import "../scss/index.scss"
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+class Layout extends React.Component  {
+  constructor(props) {
+    super(props);
+  }
 
-  return (
-    <>
+
+
+  render() {
+    const { children } = this.props;
+    return (
+      <>
       <div>
         <main>{children}</main>
       </div>
     </>
-  )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+    )
+  }
 }
 
 export default Layout

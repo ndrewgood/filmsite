@@ -8,15 +8,38 @@ import TopBar from "../components/topBar"
 import CenterButton from "../components/centerButton"
 import BottomBar from "../components/bottomBar"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <div id="test"></div>
-    <TopBar/>
-    <CenterButton />
-    <BottomBar/>
-    <BackgroundVideo />
-  </Layout>
-)
+class IndexPage extends React.Component  {
+  constructor(props) {
+    super(props);
+    this.state = { 
+      showTeam: false,
+      showInfo: false
+    };
+  }
+  
+  toggleTeam = () => {
+    this.setState({showTeam: true })
+  }
+
+  // toggleInfo = () => {
+  //   this.setState(prevState => { showInfo: !prevState.showInfo })
+  // }
+
+
+  render() {
+    let showTeam = this.state.showTeam;
+    const { children, data }= this.props;
+    return (      
+      <Layout>
+        <SEO title="Home" />
+        <div id="test" className={showTeam ? 'display' : null}></div>
+        <TopBar/>
+        <CenterButton />
+        <BottomBar passedToggleTeam={this.toggleTeam} passedToggleInfo={this.toggleInfo}/>
+        <BackgroundVideo />
+      </Layout>
+    )
+  }
+}
 
 export default IndexPage
